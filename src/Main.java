@@ -12,14 +12,14 @@ public class Main{
             System.out.println("3 - Remover tarefa");
             System.out.println("4 - Sair");
 
-            System.out.print("Escolha uma opção:");
+            System.out.print("Escolha uma opção: ");
 
             int opcao = scanner.nextInt();
             scanner.nextLine();
 
             switch (opcao){
                 case 1:
-                    System.out.print("Digite sua tarefa:");
+                    System.out.print("Digite sua tarefa: ");
                     String tarefa = scanner.nextLine();
                     tarefas.add(tarefa);
                     System.out.println("Tarefa adicionada!");
@@ -38,6 +38,7 @@ public class Main{
                     if(tarefas.isEmpty()){
                         System.out.println("Nenhuma tarefa para remover!");
                     } else {
+                        System.out.print("Digite o número da tarefa que deseja remover: ");
                         int index = scanner.nextInt();
                         if(index > 0 && index <= tarefas.size()){
                             tarefas.remove(index - 1);
@@ -53,6 +54,7 @@ public class Main{
                     return;
                 default:
                     System.out.println("Opção inválida! Tente novamente");
+
             }
         }
     }
